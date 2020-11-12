@@ -56,9 +56,17 @@
                     <div class="my-3 py-3">
                         <h2 class="display-5">@worldCup.Year</h2>
                         <p class="lead">@worldCup.Description</p>
-                        Champion: @worldCup.Champion.Country.Name
+                        Champion:
+                        <img src="@worldCup.Champion.Country.Flag" 
+                             width="64" height="64"/>
+                        @worldCup.Champion.Country.Name
                     </div>
-                    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+                    <div class="bg-light shadow-sm mx-auto" style="width: 1005px; height: 300px; padding: 0">
+                        <img src="@worldCup.TitlePic1"
+                             width="500" height="300" />
+                        <img src="@worldCup.TitlePic2"
+                             width="500" height="300" />
+                    </div>
                 </div>
             </div>
         }

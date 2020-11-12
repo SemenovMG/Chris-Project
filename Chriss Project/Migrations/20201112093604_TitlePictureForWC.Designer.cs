@@ -4,14 +4,16 @@ using Chriss_Project.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Chriss_Project.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201112093604_TitlePictureForWC")]
+    partial class TitlePictureForWC
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,10 +125,7 @@ namespace Chriss_Project.Migrations
                     b.Property<long?>("HostId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("TitlePic1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TitlePic2")
+                    b.Property<string>("TitlePic")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Year")
